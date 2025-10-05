@@ -1,0 +1,42 @@
+*{
+	font-family: GohuFont uni14 Nerd Font Mono;
+	/* padding: 0px 5px; */
+	background: transparent;
+}
+
+window#waybar {
+	padding: 10px;
+	border: 2px solid #1F8765;
+}
+
+#workspaces {
+	color: #C8D4BB;
+}
+
+#workspaces button {
+	border-right: 2px solid #1F8765;
+}
+
+#workspaces button.focused {
+	color: #C8D4BB;
+	background-color: #1F8765;
+}
+
+#pulseaudio,
+#clock,
+#network {
+	padding: 10px;
+	border-left: 2px solid #1F8765;
+}
+
+
+#network,
+#clock,
+#custom-applauncher,
+#tray,
+#workspaces,
+#pulseaudio {
+
+	color: #C8D4BB;
+	transition-duration: 120ms;
+}

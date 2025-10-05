@@ -1,0 +1,56 @@
+{
+	"layer": "bot",
+	"spacing": 0,
+	"height": 0,
+	"margin-bottom": 0,
+	"margin-top": 5,
+	"position": "top",
+	"margin-right": 15,
+	"margin-left": 15,
+
+	"modules-left": ["sway/workspaces"],
+	"modules-center": ["custom/applauncher"],
+	"modules-right": ["network", "pulseaudio", "tray", "clock"],
+
+	"sway/workspaces" : {
+		"all-outputs": false,
+		"tooltip": false
+	},
+
+	"custom/applauncher": {
+		"format": "C4v3d",
+		"on-click": "pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun --location=top -y 15",
+		"tooltip": false
+	},
+
+	"tray": {
+		"spacing": 1,
+		"tooltip": false
+	},
+
+	"clock": {
+		"format": "󰅐 {:%H:%M}",
+		"tooltip": false
+	},
+	"network": {
+		"format-ethernet": " {bandwidthDownBits}",
+		"format-disconnected": "󰤮 No Network",
+		"interval": 5,
+		"tooltip": false
+	},
+	"pulseaudio": {
+		"scroll-step": 5,
+		"max-volume": 150,
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "{icon}  {volume}%",
+		"format-icons": [
+		"",
+		"",
+		" "
+		],
+		"nospacing": 1,
+		"format-muted": " ",
+		"on-click": "pavucontrol",
+		"tooltip": false
+	}
+}
